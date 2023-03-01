@@ -1,0 +1,156 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.0.0",
+  "id": "eb3d21e5-1635-4334-a625-19249df25786",
+  "packageName": "com.microsoft.teams.employeetraining",
+  "developer": {
+    "name": "Systems Ltd",
+    "websiteUrl": "https://www.systemsltd.com/",
+    "privacyUrl": "https://www.systemsltd.com/",
+    "termsOfUseUrl": "https://www.systemsltd.com/"
+  },
+  "localizationInfo": {
+    "defaultLanguageTag": "en",
+    "additionalLanguages": [
+      {
+        "languageTag": "en",
+        "file": "en.json"
+      },
+      {
+        "languageTag": "de",
+        "file": "de.json"
+      },
+      {
+        "languageTag": "fr",
+        "file": "fr.json"
+      },
+      {
+        "languageTag": "ar",
+        "file": "ar.json"
+      },
+      {
+        "languageTag": "ja",
+        "file": "ja.json"
+      },
+      {
+        "languageTag": "es",
+        "file": "es.json"
+      },
+      {
+        "languageTag": "he",
+        "file": "he.json"
+      },
+      {
+        "languageTag": "ko",
+        "file": "ko.json"
+      },
+      {
+        "languageTag": "pt-BR",
+        "file": "pt-BR.json"
+      },
+      {
+        "languageTag": "ru",
+        "file": "ru.json"
+      },
+      {
+        "languageTag": "zh-CN",
+        "file": "zh-CN.json"
+      },
+      {
+        "languageTag": "zh-TW",
+        "file": "zh-TW.json"
+      }
+    ]
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "HMC Employee Training",
+    "full": "HMC Employee Training - Created by Systems Ltd"
+  },
+  "description": {
+    "short": "Make it easy for employees to discover, register for, and share training events.",
+    "full": "Engage your employees with training where they spend most of their time-right here in Microsoft Teams. Administrators can create new training events, specify who can attend and whether the event is mandatory or not, and close registration once capacity is reached. Once the app is added to a Teams channel, employees can visit the Discover tab to browse events, register for the ones that interest them, and use the app's message extension to suggest events to their colleagues or direct reports. Once registered, employees receive reminders in Teams, so they never miss an event!"
+  },
+  "accentColor": "#FFFFFF",
+  "staticTabs": [
+    {
+      "entityId": "discover-events",
+      "name": "Discover events",
+      "contentUrl": "https://HMD-ETA.azurefd.net/discover-events",
+      "websiteUrl": "https://HMD-ETA.azurefd.net/discover-events",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "my-events",
+      "name": "Your events",
+      "contentUrl": "https://HMD-ETA.azurefd.net/my-events",
+      "websiteUrl": "https://HMD-ETA.azurefd.net/my-events",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "0a7c90fe-aea2-48e1-802e-7214b40c0b92",
+      "scopes": [
+        "personal"
+      ],
+      "commandLists": [],
+      "isNotificationOnly": false,
+      "supportsCalling": true,
+      "supportsVideo": true
+    }
+  ],
+  "composeExtensions": [
+    {
+      "botId": "0a7c90fe-aea2-48e1-802e-7214b40c0b92",
+      "canUpdateConfiguration": false,
+      "commands": [
+        {
+          "id": "recent",
+          "title": "Recent",
+          "description": "Show all created events.",
+          "parameters": [
+            {
+              "name": "searchText",
+              "title": "recent",
+              "description": "Enter to search event"
+            }
+          ],
+          "initialRun": true
+        },
+        {
+          "id": "popular",
+          "title": "Popular",
+          "description": "Show popular events.",
+          "parameters": [
+            {
+              "name": "searchText",
+              "title": "popular",
+              "description": "Enter to search event"
+            }
+          ],
+          "initialRun": true
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "HMD-ETA.azurefd.net"
+  ],
+  "webApplicationInfo": {
+    "id": "0a7c90fe-aea2-48e1-802e-7214b40c0b92",
+    "resource": "api://HMD-ETA.azurefd.net/0a7c90fe-aea2-48e1-802e-7214b40c0b92"
+  }
+}
